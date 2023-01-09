@@ -1,3 +1,4 @@
+import utilsStyles from '../../styles/utils.module.css';
 import Date from '../../components/date';
 import Head from 'next/head'
 import Layout from '../../components/layout';
@@ -26,12 +27,13 @@ export default function Post( { postData } ) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <br />
-            {postData.id}
-            <br />
-            <Date dateString={postData.date} />
-            <br />
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <article>
+                <h1 className={utilsStyles.headingXl}>{postData.title}</h1>
+                <div className={utilsStyles.lightText}>
+                    <Date dateString={postData.date} />
+                </div>
+                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            </article>
         </Layout>
     )
 }
