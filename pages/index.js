@@ -33,7 +33,6 @@ export default function Home( { allPostsData } ) {
         <p>Hello my name is Hamid i'm developer full stack nodejs.</p>
         <p>
           This is a sample website - you'll be building a site like this on.<br />
-          <Link href="./posts/first-post">Read my first post it's very cool !</Link>
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
